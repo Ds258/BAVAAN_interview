@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="An input form" />
+  <link rel="stylesheet" href="style.css"/>
+  <script src="scripts.js"></script>
+  <title>Input Form</title>
+</head>
+<body>
+    <div class="input-form">
+        <div class="form-out">
+            <form name="inputForm" onsubmit="validateForm()">
+                <h1>Input form</h1>
+                <div>
+                    <input type="tel" id="phone" placeholder="012345689"/>
+                    <label for="phone"></label>
+                </div>
+                <div>
+                    <input type="email" id="email" placeholder="example@gmail.com"/>
+                    <label for="email"></label>
+                </div>
+                <div>
+                    <label for="cities">Choose your city</label>
+                    <select name="cities" id="cities">
+                        <option value="Hanoi">Hanoi</option>
+                        <option value="HCM">Ho Chi Minh City</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="districts">Choose your district</label>
+                    <select name="districts" id="districts">
+                        <option value="Cau Giay">Cau Giay</option>
+                        <option value="1">District 1</option>
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
