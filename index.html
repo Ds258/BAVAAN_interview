@@ -13,35 +13,36 @@
 <body>
     <div class="input-form">
         <div class="form-out">
-            <form name="inputForm" onsubmit="validateForm()">
-                <h1>Input form</h1>
-                <div>
-                    <input type="tel" id="phone" placeholder="012345689"/>
-                    <label for="phone">Phone number</label>
+            <form id="inputForm" onsubmit="validateForm(event)">
+                <h1 class="inputLabel">Input form</h1>
+                <div class="input-div">
+                    <label for="phone" class="label-layout">Phone number</label>
+                    <input type="tel" class="form-layout" id="phone" placeholder="012345689"/>              
                 </div>
-                <div>
-                    <input type="email" id="email" placeholder="example@gmail.com"/>
-                    <label for="email">Email</label>
+                <div class="input-div">
+                    <label for="email" class="label-layout">Email</label>
+                    <input type="email" class="form-layout" id="email" placeholder="example@gmail.com"/>
                 </div>
-                <div>
-                    <label for="cities">Choose your city</label>
-                    <select name="cities" id="cities">
+                <div class="input-div">
+                    <label for="cities" class="label-layout">Choose your city</label>
+                    <select name="cities" id="cities" class="form-layout">
                         <option style="display:none"></option>
                         <option value="Hanoi">Hanoi</option>
                         <option value="HCM">Ho Chi Minh City</option>
                     </select>
                 </div>
-                <div>
-                    <label for="districts">Choose your district</label>
-                    <select name="districts" id="districts">
+                <div class="input-div">
+                    <label for="districts" class="label-layout">Choose your district</label>
+                    <select name="districts" id="districts" class="form-layout">
                         <option style="display:none"></option>
                         <option value="Cau Giay">Cau Giay</option>
                         <option value="1">District 1</option>
                     </select>
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit" class="inputButton">Submit</button>
             </form>
         </div>
     </div>
+    <div id="result"></div>
 </body>
 </html>
