@@ -4,14 +4,22 @@ var regex_phone = /(84|0[3|5|7|8|9])+([0-9]{8})\b/g;
 document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById("inputForm").addEventListener("submit", 
     function(event){
-        var email = document.getElementById("email").value;
-        var phone = document.getElementById("phone").value;
-        var city = document.getElementById("cities").value;
-        var district = document.getElementById("districts").value;
-
-        document.getElementById("result").innerHTML = email + " " + city;
+        event.preventDefault();
+        console.log("Form submitted");
+        var isValid = validateForm(event); // Call validateForm function here
+        if(isValid) {
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var city = document.getElementById("cities").value;
+            var district = document.getElementById("districts").value;
+            if (document.getElementById("result").style.display == "none") {
+                document.getElementById("result").style.display = "";
+            }
+            document.getElementById("result").innerHTML = email + " " + city;
+        }
     });
-})
+});
+
 
 
 function validateForm(event) {
@@ -32,7 +40,7 @@ function validateForm(event) {
         event.preventDefault();
         alert("Phone is not invalid");
         return false;
-    } else {
+    } else if ((!regex_email.test(email))){
         event.preventDefault();
         alert("Email is not invalid");
         return false;
