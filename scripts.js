@@ -1,4 +1,4 @@
-var regex_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+var regex_email = /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/gm; 
 var regex_phone = /^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/;
 
 const cityByDistricts = {
@@ -81,6 +81,3 @@ function validateForm(event) {
     }
     //return true;
 }
-
-
-
