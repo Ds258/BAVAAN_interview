@@ -8,7 +8,7 @@ const cityByDistricts = {
 //Only districts in the urban for testing
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    document.getElementById("cities").addEventListener("change", function() {
+    document.getElementById("cities").addEventListener("change", function() { //select district based on the city
         var selectedCity = this.value;
         var districtsSelect = document.getElementById("districts");
         districtsSelect.innerHTML = "";
@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         }
     })
-    document.getElementById("inputForm").addEventListener("submit", 
+
+    document.getElementById("inputForm").addEventListener("submit", //Submit form
     function(event){
         event.preventDefault(); //Prevent the page reload
         console.log("Form submitted");
