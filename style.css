@@ -66,8 +66,16 @@ label {
     background-color: #0e467a;
 }
 
-.result {
-    position: relative;
+.result-layout {
+    width: 100%;
+    max-width: 330px;
     margin: auto;
+    margin-top: 0;
     display: none;
+}
+
+.result {
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
 }

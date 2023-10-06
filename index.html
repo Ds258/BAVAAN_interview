@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="input-form">
-        <div class="form-out">
+        <div id="form-out" class="form-out">
             <form id="inputForm">
                 <h1 class="inputLabel">Input form</h1>
                 <div class="input-div">
@@ -26,7 +26,7 @@
                 <div class="input-div">
                     <label for="cities" class="label-layout">Choose your city</label>
                     <select name="cities" id="cities" class="form-layout">
-                        <option style="display:none"></option>
+                        <option value="" disabled selected>--Select your city--</option>
                         <option value="Hanoi">Hanoi</option>
                         <option value="HCM">Ho Chi Minh City</option>
                     </select>
@@ -34,15 +34,17 @@
                 <div class="input-div">
                     <label for="districts" class="label-layout">Choose your district</label>
                     <select name="districts" id="districts" class="form-layout">
-                        <option style="display:none"></option>
-                        <option value="Cau Giay">Cau Giay</option>
-                        <option value="1">District 1</option>
+                        <option value="" disabled selected>--Select your district--</option>
+                        <!-- <option value="Cau Giay">Cau Giay</option>
+                        <option value="1">District 1</option> -->
                     </select>
                 </div>
                 <button type="submit" class="inputButton">Submit</button>
             </form>
         </div>
-        <div id="result" class="result"></div>
+        <div id="result-layout" class="result-layout">
+            <div id="result" class="result"></div>
+        </div>   
     </div>
     
 </body>
